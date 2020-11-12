@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import AddTaskButton from './components/AddTaskButton/AddTaskButton';
 import Task from './components/Task/Task';
-import Header from './components/Header/Header';
-
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
