@@ -1,0 +1,19 @@
+.TaskContainer {
+  padding: 15px;
+  background-color: #eef0e8;
+  margin: 15px 0;
+}
+.TaskFlexContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.TaskDate {
+  color: #f91672;
+  font-weight: bold;
+}
+.WorkingOn {
+  background-color: #319e83;
+  color: white;
+  padding: 0 10px;
+  border-radius: 6px;
+}
