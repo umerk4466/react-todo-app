@@ -1,9 +1,9 @@
-import './header.css';
+import './Header.css';
 
-function Header() {
+function Header(props) {
   return (
     <div>
-      <p>header</p>
+      <p>Header</p>
     </div>
   );
 }

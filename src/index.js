@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Header from './components/header/header';
-import SkillBlock from './components/skill/skillBlock';
+import AddTaskButton from './components/AddTaskButton/AddTaskButton';
+import Task from './components/Task/Task';
+import Header from './components/Header/Header';
+
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+    <AddTaskButton/>
+    <Task/>
     <Header/>
-    <SkillBlock/>
   </React.StrictMode>,
   document.getElementById('root')
 );
