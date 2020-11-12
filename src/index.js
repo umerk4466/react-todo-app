@@ -11,8 +11,9 @@ ReactDOM.render(
   <React.StrictMode>
     <div className="container-fluid">
       <AddTaskButton/>
-      <Task/>
-      <Task/>
+      <Task workingOn="true" taskText="First stediv of the tasks This  of the tasks This  of the tasks This   of the tasks This  of the tasks This   of the tasks This   of the tasks This  of the tasks This  of the tasks This   of the tasks This   of the tasks This   of the tasks This   of the tasks This  of the tasks This  of the tasks This  of the tasks This  of the tasks This  of the tasks This  of the tasks This  of the tasks This  of the tasks This  of the tasks This is a toast on a gam secondary background — check it out!....." />
+      <Task taskText="s   of the tasks This  of the tasks This  of the tasks This   of the tasks This   of the tasks This   of the tasks This   of the tasks This  of the tasks This  of the tasks This  of the tasks This  of the tasks This  of the tasks This  of the tasks This  of the tasks This  of the tasks This  of the tasks This is a toast on a gam secondary background — check it out!....." />
+
     </div>
 
   </React.StrictMode>,
