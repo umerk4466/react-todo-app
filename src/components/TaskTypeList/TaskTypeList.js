@@ -1,11 +1,11 @@
-import './Step.css';
+import './TaskTypeList.css';
 
-function Step(props) {
+function TaskTypeList(props) {
   return (
     <div>
-      <p>Step</p>
+      <p>TaskTypeList</p>
     </div>
   );
 }
 
-export default Step;
+export default TaskTypeList;
