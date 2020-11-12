@@ -11,7 +11,6 @@ ReactDOM.render(
   <React.StrictMode>
     <AddTaskButton/>
     <Task/>
-    <Header/>
   </React.StrictMode>,
   document.getElementById('root')
 );
