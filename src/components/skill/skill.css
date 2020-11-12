@@ -1,0 +1,22 @@
+.skillBlockContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.skillContainer {
+  padding: 15px;
+}
+.skillLine {
+  width: 20rem;
+  display: block;
+  height: 4px;
+  border: 1px solid #f2f5f6;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 0 8px #e6e6fa;
+}
+.skillPercentage {
+  height: 4px;
+  float: left;
+  background-color: lightgray;
+}
