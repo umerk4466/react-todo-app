@@ -1,6 +1,6 @@
 import './Header.css';
 
-function Header(props) {
+function Header() {
   return (
     <div>
       <p>Header</p>
