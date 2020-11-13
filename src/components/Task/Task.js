@@ -1,10 +1,11 @@
 import React from 'react';
+import { motion } from "framer-motion"
 import './Task.css';
 
 function Task(props) {
   let [expend, setExpend] = React.useState(false);
   let workingOn = props.workingOn ? <span className="WorkingOn">Working on</span> : null;
-  let taskText =  expend ? props.taskText : props.taskText.substring(0,200)+"...";
+  let taskText =  expend ? <motion.div initial={{opacity:0}} animate={{opacity:1}}  transition={{duration: 1}}>{props.taskText}</motion.div> : <div>{props.taskText.substring(0,200)+"..."}</div>;
   
   const toggleTask = () => {
     setExpend(!expend);
@@ -13,7 +14,7 @@ function Task(props) {
   return (
     <div onClick={toggleTask} className="TaskContainer">
       <div className="TaskFlexContainer">
-        <div>{taskText}</div>
+        {taskText}
         <div><button onClick={()=> alert("sk")} className="btn ml-2"><i className="fa fa-ellipsis-v fa-2x"></i></button></div>
       </div>
       <div className="TaskFlexContainer mt-2">
