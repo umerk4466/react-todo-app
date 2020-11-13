@@ -7,6 +7,7 @@ function Task(props) {
   let workingOn = props.workingOn ? <span className="WorkingOn">Working on</span> : null;
   let taskText =  expend ? <motion.div initial={{opacity:0}} animate={{opacity:1}}  transition={{duration: 1}}>{props.taskText}</motion.div> : <div>{props.taskText.substring(0,200)+"..."}</div>;
   
+  
   const toggleTask = () => {
     setExpend(!expend);
   }
