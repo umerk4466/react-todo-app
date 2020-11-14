@@ -41,43 +41,30 @@
 
 
 
+
+
+
+
+
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import "./Task.css";
+import Task from '../Task/Task';
+import { motion, AnimateSharedLayout} from "framer-motion";
+import "./TaskList.css";
 
 
+const tasksList = [0];
 
-
-
-function Task(props) {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const toggleOpen = () => setIsOpen(!isOpen);
-
+function TaskList() {
   return (
-    <motion.li layout onClick={toggleOpen} initial={{x:30+"px"}} animate={{x:0}}> 
-      <motion.div layout>{props.taskText}</motion.div>
-      <AnimatePresence key={props.id}>{isOpen && <Content props={props} />}</AnimatePresence>
-    </motion.li>
-  );
-}
-
-export default Task;
-
-
-function Content({props}) {
-  return (
-    <motion.div
-      layout
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <div className="row" />
-      <div className="row" />
-      <div className="row" />
-    </motion.div>
+    <AnimateSharedLayout>
+      <motion.ul layout>
+        {tasksList.map((task) => (
+              <Task key={task} workingOn="true" taskText="First stediv of the tasks This  of the tasks This  of the tasks This   of the tasks This  of the tasks This   of the tasks This   of the tasks This  of the tasks This  of the tasks This   of the tasks This   of the tasks This   of the tasks This   of the tasks This  of the tasks This  of the tasks This  of the tasks This  of the tasks This  of the tasks This  of the tasks This  of the tasks This  of the tasks This  of the tasks This is a toast on a gam secondary background — check it out!." />
+        ))}
+      </motion.ul>
+    </AnimateSharedLayout>
   );
 }
 
 
-// export default Content;
+export default TaskList;
