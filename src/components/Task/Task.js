@@ -6,14 +6,21 @@ import Bottleneck from "../Bottleneck/Bottleneck"
 
 function Task(props) {
   const [isOpen, setIsOpen] = React.useState(false);
-  const toggleOpen = () => setIsOpen(!isOpen);
   const workingOn = props.workingOn ? <span className="WorkingOn">Working on</span> : null;
+
+  // functions
+  const toggleOpen = () => setIsOpen(!isOpen);
+
+  const openMenu = (e) => {
+    e.stopPropagation();
+    alert("menu is pressed now")
+  }
 
   return (
     <motion.li layout className="LiTaskContainer" onClick={toggleOpen} initial={{x:30+"px"}} animate={{x:0}}>
       <motion.div layout className="TaskFlexContainer">
         {props.taskText}
-        <div><button onClick={()=> alert("sk")} className="btn ml-2"><i className="fa fa-ellipsis-v fa-2x"></i></button></div>
+        <div><button onClick={ openMenu } className="btn ml-2"><i className="fa fa-ellipsis-v fa-2x"></i></button></div>
       </motion.div>
       <motion.div layout className="TaskFlexContainer mt-2">
         <div className="TaskDate">Dues Date : 10-12-2020</div>
@@ -39,7 +46,6 @@ function Content({props}) {
       <Bottleneck/>
       <Bottleneck/>
       <Bottleneck/>
-
       
     </motion.div>
   );

@@ -3,7 +3,7 @@ import './Bottleneck.css';
 function Bottleneck() {
   return (
     <div>
-      <p>Bottleneck</p>
+      <p onClick={()=> alert("sdk")}>Bottleneck</p>
     </div>
   );
 }
