@@ -54,7 +54,7 @@ function Task(props) {
   const toggleOpen = () => setIsOpen(!isOpen);
 
   return (
-    <motion.li layout onClick={toggleOpen} initial={{x:30+"px"}} animate={{x:0}}> 
+    <motion.li layout onClick={toggleOpen} initial={{x:30+"px"}} animate={{x:0}}>
       <motion.div layout>{props.taskText}</motion.div>
       <AnimatePresence key={props.id}>{isOpen && <Content props={props} />}</AnimatePresence>
     </motion.li>
@@ -70,7 +70,8 @@ function Content({props}) {
       layout
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      exit={{ opacity: 0}}
+      transition={{duration:0.5}}
     >
       <div className="row" />
       <div className="row" />
