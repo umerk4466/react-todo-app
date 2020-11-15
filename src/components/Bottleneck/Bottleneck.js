@@ -15,7 +15,7 @@ function Bottleneck({props}) {
   }
 
   return (
-    <motion.li layout className="LiBottleneckContainer" onClick={toggleOpen} initial={{x:60+"px" }} animate={{x:0}}>
+    <motion.li layout className="LiBottleneckContainer" onClick={toggleOpen}>
       <motion.div layout className="BottleneckFlexContainer">
         {props.bottleneckText}
         <CompleteBottleneckBtn props={props}></CompleteBottleneckBtn>

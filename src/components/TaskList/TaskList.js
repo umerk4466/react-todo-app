@@ -28,7 +28,7 @@ const tasksList = [
 function TaskList() {
   return (
     <AnimateSharedLayout>
-      <motion.ul layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="UlTaskContainer">
+      <motion.ul layout initial={{ opacity: 0, x:30+"px" }} animate={{ opacity: 1 ,x:0}} className="UlTaskContainer">
         {tasksList.map((task) => (
           <Task key={task.id} props={task} />
         ))}

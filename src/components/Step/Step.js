@@ -8,7 +8,7 @@ function Step({props}) {
   const toggleOpen = (e) => {e.stopPropagation();}
 
   return (
-    <motion.li layout className="LiStepContainer" onClick={toggleOpen} initial={{x:60+"px" }} animate={{x:0}}>
+    <motion.li layout className="LiStepContainer" onClick={toggleOpen}>
         {props.stepText}
     </motion.li>
   );

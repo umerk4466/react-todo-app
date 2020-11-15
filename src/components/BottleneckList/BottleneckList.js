@@ -1,6 +1,6 @@
 import React from "react";
 import Bottleneck from '../Bottleneck/Bottleneck';
-import { motion, AnimateSharedLayout} from "framer-motion";
+import { motion} from "framer-motion";
 import "./BottleneckList.css";
 
 
@@ -19,14 +19,12 @@ const bottleneckList = [
 
 function BottleneckList() {
   return (
-    <AnimateSharedLayout>
-      <motion.ul layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{opacity:0}} className="UlBottleneckContainer">
+      <motion.ul layout initial={{ opacity: 0, x:60+"px" }} animate={{ opacity: 1, x:0}} exit={{opacity:0}} className="UlBottleneckContainer">
       <motion.div layout className="BootlenecksText">Bootlenecks</motion.div>
         {bottleneckList.map((bootleneck) => (
           <Bottleneck key={bootleneck.id} props={bootleneck} />
         ))}
       </motion.ul>
-    </AnimateSharedLayout>
   );
 }
 

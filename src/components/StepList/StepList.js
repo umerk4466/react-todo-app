@@ -1,6 +1,6 @@
 import React from "react";
 import Step from '../Step/Step';
-import { motion, AnimateSharedLayout} from "framer-motion";
+import { motion } from "framer-motion";
 import "./StepList.css";
 
 
@@ -17,14 +17,12 @@ const stepList = [
 
 function StepList() {
   return (
-    <AnimateSharedLayout>
-      <motion.ul layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{opacity:0}} className="UlStepContainer">
+      <motion.ul layout initial={{ opacity: 0, x:60+"px" }} animate={{ opacity: 1,x:0 }} exit={{opacity:0}} className="UlStepContainer">
       <motion.div layout className="StepText">Steps</motion.div>
         {stepList.map((step) => (
           <Step key={step.id} props={step} />
         ))}
       </motion.ul>
-    </AnimateSharedLayout>
   );
 }
 
