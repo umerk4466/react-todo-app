@@ -1,21 +1,26 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion,AnimatePresence } from "framer-motion";
 import "./Bottleneck.css";
 import CompleteBottleneckBtn from "./CompleteBottleneckBtn"
+import StepList from "../StepList/StepList"
+
 
 
 function Bottleneck({props}) {
   const [isOpen, setIsOpen] = React.useState(false);
   // functions
-  const toggleOpen = () => setIsOpen(!isOpen);
+  const toggleOpen = (e) => {
+    e.stopPropagation();
+    setIsOpen(!isOpen)
+  }
 
   return (
-    <motion.li layout className="LiBottleneckContainer" onClick={toggleOpen} initial={{x:60+"px" }} animate={{x:0}} transition={{type:"spring"}}>
+    <motion.li layout className="LiBottleneckContainer" onClick={toggleOpen} initial={{x:60+"px" }} animate={{x:0}}>
       <motion.div layout className="BottleneckFlexContainer">
         {props.bottleneckText}
         <CompleteBottleneckBtn props={props}></CompleteBottleneckBtn>
       </motion.div>
-      {/* <AnimatePresence key={props.id}>{isOpen && <BottleneckList props={props} />}</AnimatePresence> */}
+      <AnimatePresence key={props.id}>{isOpen && <StepList props={props} />}</AnimatePresence>
     </motion.li>
   );
 }

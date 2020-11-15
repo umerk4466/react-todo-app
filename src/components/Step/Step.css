@@ -1,0 +1,7 @@
+.LiStepContainer {
+  padding: 15px;
+  background-color: whitesmoke;
+  margin: 6px 0;
+  list-style: none;
+  border-radius: 5px;
+}
