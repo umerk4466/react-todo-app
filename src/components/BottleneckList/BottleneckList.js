@@ -8,7 +8,7 @@ const bottleneckList = [
   {
       id: 1,
       isCompleted: false,
-      bottleneckText: "bottle first"
+      bottleneckText: "bottle first bottle firstbottle firstbottle firstbottle firstbottle firstbottle firstbottle firstbottle firstbottle firstbottle firstbottle firstbottle firstbottle firstbottle first"
   },
   {
     id: 2,
