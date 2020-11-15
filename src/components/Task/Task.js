@@ -1,10 +1,10 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Task.css";
-import Bottleneck from "../Bottleneck/Bottleneck"
+import BottleneckList from "../BottleneckList/BottleneckList"
 
 
-function Task(props) {
+function Task({props}) {
   const [isOpen, setIsOpen] = React.useState(false);
   const workingOn = props.workingOn ? <span className="WorkingOn">Working on</span> : null;
   // functions
@@ -24,30 +24,9 @@ function Task(props) {
         <div className="TaskDate">Dues Date : {props.dueDate}</div>
         {workingOn}
       </motion.div>
-      <AnimatePresence key={props.id}>{isOpen && <Content props={props} />}</AnimatePresence>
+      <AnimatePresence key={props.id}>{isOpen && <BottleneckList props={props} />}</AnimatePresence>
     </motion.li>
   );
 }
 
 export default Task;
-
-
-function Content({props}) {
-  return (
-    <motion.div
-      layout
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0}}
-      transition={{duration:0.5}}
-    >
-      <Bottleneck/>
-      <Bottleneck/>
-      <Bottleneck/>
-      
-    </motion.div>
-  );
-}
-
-
-// export default Content;

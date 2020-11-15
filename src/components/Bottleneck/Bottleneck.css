@@ -1,0 +1,12 @@
+.LiBottleneckContainer {
+  padding: 15px;
+  background-color: silver;
+  margin: 6px 0;
+  cursor: pointer;
+  list-style: none;
+  border-radius: 5px !important;
+}
+.BottleneckFlexContainer {
+  display: flex;
+  justify-content: space-between;
+}
