@@ -5,7 +5,7 @@ function CompleteBottleneckBtn({props}) {
     }
     const unFinishBottleneck = (e) => {
         e.stopPropagation();
-        alert("unFinishBottleneck");
+        alert("unFinishBottleneck")
     }
     const btnFunction = props.isCompleted ? unFinishBottleneck : finishBottleneck;
     const btnClass = props.isCompleted ? "fa fa-undo" : "fa fa-check";
