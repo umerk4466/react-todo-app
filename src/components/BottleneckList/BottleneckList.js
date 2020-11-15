@@ -20,7 +20,7 @@ const bottleneckList = [
 function BottleneckList() {
   return (
     <AnimateSharedLayout>
-      <motion.ul  layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0}} transition={{duration:0.5}} className="UlBottleneckContainer">
+      <motion.ul layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0}} transition={{duration:0.5}} className="UlBottleneckContainer">
         {bottleneckList.map((bootleneck) => (
           <Bottleneck key={bootleneck.id} props={bootleneck} />
         ))}
