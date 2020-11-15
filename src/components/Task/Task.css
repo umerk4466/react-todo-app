@@ -4,7 +4,7 @@
   margin: 15px 0;
   cursor: pointer;
   list-style: none;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 .TaskFlexContainer {
   display: flex;

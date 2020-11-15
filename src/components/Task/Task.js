@@ -15,7 +15,7 @@ function Task({props}) {
   }
 
   return (
-    <motion.li layout className="LiTaskContainer" onClick={toggleOpen} initial={{x:30+"px", borderRadius: 15 }} animate={{x:0}}>
+    <motion.li layout className="LiTaskContainer" onClick={toggleOpen} initial={{x:30+"px"}} animate={{x:0}}>
       <motion.div layout className="TaskFlexContainer">
         {props.taskText}
         <div><button onClick={ openMenu } className="btn ml-2"><i className="fa fa-ellipsis-v fa-2x"></i></button></div>

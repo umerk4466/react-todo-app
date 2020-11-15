@@ -4,7 +4,7 @@
   margin: 6px 0;
   cursor: pointer;
   list-style: none;
-  border-radius: 5px !important;
+  border-radius: 5px;
 }
 .BottleneckFlexContainer {
   display: flex;

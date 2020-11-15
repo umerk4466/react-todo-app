@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import "./Bottleneck.css";
 import CompleteBottleneckBtn from "./CompleteBottleneckBtn"
 
@@ -10,7 +10,7 @@ function Bottleneck({props}) {
   const toggleOpen = () => setIsOpen(!isOpen);
 
   return (
-    <motion.li layout className="LiBottleneckContainer" onClick={toggleOpen} initial={{x:30+"px", borderRadius: 15 }} animate={{x:0}}>
+    <motion.li layout className="LiBottleneckContainer" onClick={toggleOpen} initial={{x:60+"px" }} animate={{x:0}} transition={{type:"spring"}}>
       <motion.div layout className="BottleneckFlexContainer">
         {props.bottleneckText}
         <CompleteBottleneckBtn isCompleted={props.isCompleted}></CompleteBottleneckBtn>
