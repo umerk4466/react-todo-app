@@ -13,7 +13,7 @@ function Bottleneck({props}) {
     <motion.li layout className="LiBottleneckContainer" onClick={toggleOpen} initial={{x:60+"px" }} animate={{x:0}} transition={{type:"spring"}}>
       <motion.div layout className="BottleneckFlexContainer">
         {props.bottleneckText}
-        <CompleteBottleneckBtn isCompleted={props.isCompleted}></CompleteBottleneckBtn>
+        <CompleteBottleneckBtn props={props}></CompleteBottleneckBtn>
       </motion.div>
       {/* <AnimatePresence key={props.id}>{isOpen && <BottleneckList props={props} />}</AnimatePresence> */}
     </motion.li>

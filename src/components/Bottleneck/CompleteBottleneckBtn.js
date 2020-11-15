@@ -1,4 +1,4 @@
-function CompleteBottleneckBtn({isCompleted}) {
+function CompleteBottleneckBtn({props}) {
     const finishBottleneck = (e) => {
         e.stopPropagation();
         alert("finishBottleneck")
@@ -7,8 +7,8 @@ function CompleteBottleneckBtn({isCompleted}) {
         e.stopPropagation();
         alert("unFinishBottleneck")
     }
-    const btnFunction = isCompleted ? unFinishBottleneck : finishBottleneck;
-    const btnClass = isCompleted ? "fa fa-undo" : "fa fa-check";
+    const btnFunction = props.isCompleted ? unFinishBottleneck : finishBottleneck;
+    const btnClass = props.isCompleted ? "fa fa-undo" : "fa fa-check";
     return (
             <button onClick={btnFunction} className="btn ml-2">
                 <i className={btnClass}></i>
