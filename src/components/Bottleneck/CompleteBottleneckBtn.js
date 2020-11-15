@@ -14,6 +14,5 @@ function CompleteBottleneckBtn({isCompleted}) {
                 <i className={btnClass}></i>
             </button>
     );
-  }
-  
-  export default CompleteBottleneckBtn;
+}
+export default CompleteBottleneckBtn;
