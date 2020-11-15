@@ -21,6 +21,7 @@ function BottleneckList() {
   return (
     <AnimateSharedLayout>
       <motion.ul layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{opacity:0}} className="UlBottleneckContainer">
+      <motion.div layout className="BootlenecksText">Bootlenecks</motion.div>
         {bottleneckList.map((bootleneck) => (
           <Bottleneck key={bootleneck.id} props={bootleneck} />
         ))}
