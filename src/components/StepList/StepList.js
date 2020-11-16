@@ -18,7 +18,7 @@ const stepList = [
 function StepList() {
   return (
       <motion.ul layout initial={{ opacity: 0, x:60+"px" }} animate={{ opacity: 1,x:0 }} exit={{opacity:0}} className="UlStepContainer">
-      <motion.div layout className="StepText">Steps</motion.div>
+      <motion.div layout className="StepText">Steps to take</motion.div>
         {stepList.map((step) => (
           <Step key={step.id} props={step} />
         ))}
